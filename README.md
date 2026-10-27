@@ -10,7 +10,7 @@ Este repositorio contiene el código fuente de mi portafolio web personal, donde
 * **Desarrollo Web:** HTML5, CSS3.
 
 ## 🌐 Sitio Web
-Puedes visitar mi portafolio desplegado en: [Tu Enlace de GitHub Pages](https://tu-usuario.github.io/portafolio-analisis-datos/)
+Puedes visitar mi portafolio desplegado en: [Tu Enlace de GitHub Pages](https://cabrera30micaela.github.io/portafolio_analisis_datos/)
 
 ## 📩 Contacto
-* **LinkedIn:** [tu-perfil](https://linkedin.com/in/tu-perfil)
+* **LinkedIn:** (https://www.linkedin.com/in/micaela-cabrera-310a801b4/)
