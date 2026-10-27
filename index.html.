@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Micaela Cabrera Herrera | Portafolio de Análisis de Datos e IA</title>
+  <title>Micaela Cabrera Herrera | Portafolio Dinámico</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -27,18 +27,18 @@
       padding: 2rem 1rem;
     }
     .container {
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto;
     }
     header {
       text-align: center;
-      padding: 2.5rem 0;
+      padding: 2rem 0 1.5rem 0;
       border-bottom: 1px solid var(--border);
     }
     h1 {
       font-size: 2.2rem;
       color: var(--text);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
     .subtitle {
       color: var(--accent);
@@ -46,18 +46,12 @@
       font-weight: 600;
       margin-bottom: 1rem;
     }
-    .bio {
-      color: var(--text-muted);
-      max-width: 700px;
-      margin: 0 auto 1.5rem auto;
-      font-size: 0.98rem;
-      text-align: justify;
-    }
     .links {
       display: flex;
       justify-content: center;
       gap: 1rem;
       flex-wrap: wrap;
+      margin-top: 1rem;
     }
     .btn {
       display: inline-block;
@@ -66,7 +60,9 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 0.9rem;
-      transition: all 0.2s;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
     }
     .btn-primary {
       background-color: var(--accent);
@@ -78,71 +74,126 @@
     .btn-outline {
       border: 1px solid var(--accent);
       color: var(--accent);
+      background: transparent;
     }
     .btn-outline:hover {
       background-color: rgba(56, 189, 248, 0.1);
     }
-    section {
-      margin: 3rem 0;
+
+    /* Menú Dinámico de Pestañas */
+    nav.tab-nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 2rem 0 1.5rem 0;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
     }
+    .tab-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .tab-btn:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #0f172a;
+      border-color: var(--accent);
+    }
+
+    /* Contenido de Pestañas */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease-in-out forwards;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
       border-left: 4px solid var(--accent);
       padding-left: 0.75rem;
     }
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-    .tag {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-    }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
+
+    /* Estilos de Tarjetas */
     .card {
       background-color: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      margin-bottom: 1.2rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
     }
     .card h3 {
       font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
     .card p {
       color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
+      font-size: 0.92rem;
     }
-    .card-tags {
+
+    /* Filtros para Proyectos */
+    .filter-container {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.3rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+    .filter-btn.active {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .skills-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 1.2rem;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
     }
-    .card-tag {
-      font-size: 0.75rem;
-      background: #0f172a;
+    .tag {
+      background-color: #0f172a;
+      border: 1px solid var(--border);
       color: var(--accent);
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
     }
+
     footer {
       text-align: center;
       padding-top: 2rem;
+      margin-top: 3rem;
       border-top: 1px solid var(--border);
       color: var(--text-muted);
       font-size: 0.85rem;
@@ -154,17 +205,44 @@
     <header>
       <h1>Micaela Cabrera Herrera</h1>
       <p class="subtitle">Análisis de Datos & Inteligencia Artificial | Estudiante FCE-UBA</p>
-      <p class="bio">
-        Estudiante de la Tecnicatura en Gestión y Análisis de Datos (FCE-UBA) con formación continua en Inteligencia Artificial. Enfocada en la resolución de problemas cuantitativos, limpieza, integración y análisis de datos con Python y SQL, combinación de modelos de optimización lineal y análisis financiero. En búsqueda activa de una <strong>pasantía o rol Trainee</strong> en el área de datos y tecnología.
-      </p>
       <div class="links">
         <a href="https://www.linkedin.com/in/micaela-cabrera-310a801b4/" target="_blank" class="btn btn-primary">LinkedIn</a>
         <a href="https://github.com/cabrera30micaela" target="_blank" class="btn btn-outline">GitHub</a>
       </div>
     </header>
 
-    <section>
-      <h2>Habilidades & Herramientas</h2>
+    <!-- Navegación Dinámica -->
+    <nav class="tab-nav">
+      <button class="tab-btn active" onclick="switchTab('about')">👤 Sobre Mí</button>
+      <button class="tab-btn" onclick="switchTab('education')">🎓 Educación & Habilidades</button>
+      <button class="tab-btn" onclick="switchTab('projects')">📊 Trabajos & Proyectos</button>
+    </nav>
+
+    <!-- Pestaña 1: Sobre Mí -->
+    <section id="about" class="tab-content active">
+      <h2>Perfil Profesional</h2>
+      <div class="card">
+        <p style="text-align: justify; margin-bottom: 1rem;">
+          Estudiante de la Tecnicatura en Gestión y Análisis de Datos (FCE-UBA) con formación continua en Inteligencia Artificial. Me enfoco en la resolución de problemas cuantitativos, limpieza, integración y análisis de datos utilizando Python y SQL, combinados con modelos de optimización lineal y análisis financiero.
+        </p>
+        <p style="text-align: justify;">
+          🎯 <strong>Objetivo:</strong> Sumarme a un equipo de trabajo dinámico mediante una <strong>pasantía o rol Trainee</strong> en el área de Análisis de Datos, Business Intelligence o Inteligencia Artificial.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pestaña 2: Educación y Habilidades -->
+    <section id="education" class="tab-content">
+      <h2>Formación Académica</h2>
+      <div class="card">
+        <h3>Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones</h3>
+        <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">Facultad de Ciencias Económicas — Universidad de Buenos Aires (FCE-UBA)</p>
+        <p>
+          Formación cuantitativa orientada a la programación en Python, consultas SQL, modelos de programación lineal, matrices, cálculo diferencial e integral y responsabilidad ética en la gobernanza de datos.
+        </p>
+      </div>
+
+      <h2 style="margin-top: 2rem;">Habilidades Técnicas</h2>
       <div class="skills-grid">
         <span class="tag">Python</span>
         <span class="tag">Pandas</span>
@@ -176,59 +254,37 @@
         <span class="tag">Álgebra Lineal & Matrices</span>
         <span class="tag">Análisis Financiero</span>
         <span class="tag">Excel Avanzado</span>
-        <span class="tag">Soporte Contable & Administrativo</span>
+        <span class="tag">Gestión Contable / Administrativa</span>
       </div>
     </section>
 
-    <section>
-      <h2>Proyectos Destacados</h2>
-      <div class="projects-grid">
-        
-        <!-- Proyecto 1: SNIC -->
-        <div class="card">
-          <div>
-            <h3>Análisis de Datos Públicos SNIC (2020–2024)</h3>
-            <p>
-              Integración, procesamiento y análisis de microdatos del Sistema Nacional de Información Criminal abarcando las 24 jurisdicciones de Argentina. Desarrollo de un pipeline automatizado de limpieza e integración de datos y visualizaciones estadísticas para la identificación de tendencias regionales.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Python</span>
-              <span class="card-tag">Pandas</span>
-              <span class="card-tag">Matplotlib</span>
-              <span class="card-tag">Google Colab</span>
-            </div>
-          </div>
-          <a href="https://github.com/cabrera30micaela" target="_blank" class="btn btn-outline" style="text-align: center;">Ver en GitHub</a>
-        </div>
-
-        <!-- Proyecto 2: Optimización Organizacional -->
-        <div class="card">
-          <div>
-            <h3>Modelos de Optimización & Análisis Financiero</h3>
-            <p>
-              Modelización matemática de problemas organizacionales mediante programación lineal, sistemas de ecuaciones lineales y matrices. Aplicación de cálculo marginal e integral a funciones de oferta, demanda, costos y beneficios para la evaluación de inversiones.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Python</span>
-              <span class="card-tag">Álgebra Lineal</span>
-              <span class="card-tag">Análisis Financiero</span>
-              <span class="card-tag">FCE-UBA</span>
-            </div>
-          </div>
-          <a href="https://github.com/cabrera30micaela" target="_blank" class="btn btn-outline" style="text-align: center;">Ver en GitHub</a>
-        </div>
-
+    <!-- Pestaña 3: Trabajos Hechos -->
+    <section id="projects" class="tab-content">
+      <h2>Proyectos & Trabajos Realizados</h2>
+      
+      <!-- Filtro Interactivo -->
+      <div class="filter-container">
+        <button class="filter-btn active" onclick="filterProjects('all')">Todos</button>
+        <button class="filter-btn" onclick="filterProjects('python')">Python</button>
+        <button class="filter-btn" onclick="filterProjects('math')">Optimización / Math</button>
       </div>
-    </section>
 
-    <section>
-      <h2>Formación Académica</h2>
-      <div class="card">
-        <h3>Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones</h3>
-        <p style="margin-bottom: 0.5rem; color: var(--accent);">Facultad de Ciencias Económicas — Universidad de Buenos Aires (FCE-UBA)</p>
-        <p style="font-size: 0.88rem; color: var(--text-muted);">
-          Formación cuantitativa orientada al procesamiento de datos, análisis de métricas, modelización matemática, SQL, Python, análisis financiero y responsabilidad ética en la gobernanza de datos.
-        </p>
+      <div id="projects-list">
+        <div class="card project-item python">
+          <h3>Análisis de Datos Públicos SNIC (2020–2024)</h3>
+          <p style="margin-bottom: 0.8rem;">
+            Integración, limpieza y análisis estadístico de microdatos del Sistema Nacional de Información Criminal abarcando las 24 jurisdicciones de Argentina. Desarrollo de pipelines en Google Colab con Pandas y visualización con Matplotlib.
+          </p>
+          <a href="https://github.com/cabrera30micaela" target="_blank" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">Ver en GitHub</a>
+        </div>
+
+        <div class="card project-item math">
+          <h3>Modelos de Optimización & Análisis Financiero</h3>
+          <p style="margin-bottom: 0.8rem;">
+            Modelización matemática de problemas organizacionales mediante programación lineal, sistemas de ecuaciones y matrices. Aplicación de cálculo marginal e integral a funciones de oferta, demanda, costos y beneficios.
+          </p>
+          <a href="https://github.com/cabrera30micaela" target="_blank" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">Ver en GitHub</a>
+        </div>
       </div>
     </section>
 
@@ -236,5 +292,36 @@
       <p>© 2026 Micaela Cabrera Herrera — Buenos Aires, Argentina</p>
     </footer>
   </div>
+
+  <!-- Lógica JavaScript para la interactividad -->
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+
+    function filterProjects(category) {
+      const items = document.querySelectorAll('.project-item');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
