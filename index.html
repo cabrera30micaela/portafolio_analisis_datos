@@ -154,28 +154,6 @@
       font-size: 0.92rem;
     }
 
-    /* Filtros para Proyectos */
-    .filter-container {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .filter-btn {
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      padding: 0.3rem 0.8rem;
-      border-radius: 6px;
-      font-size: 0.82rem;
-      cursor: pointer;
-    }
-    .filter-btn.active {
-      background: rgba(139, 92, 246, 0.15);
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
@@ -225,10 +203,13 @@
       <h2>Perfil Profesional</h2>
       <div class="card">
         <p style="text-align: justify; margin-bottom: 1rem;">
-          Estudiante de la Tecnicatura en Gestión y Análisis de Datos en la Facultad de Ciencias Económicas (FCE-UBA). Me enfoco en el análisis cuantitativo, la limpieza, integración y procesamiento de datos con Python y SQL, combinados con modelos de optimización lineal y análisis financiero. Me encuentro en constante formación e investigación sobre las nuevas herramientas de Inteligencia Artificial para potenciar procesos de análisis y productividad.
+          Estudiante avanzada de la Tecnicatura Universitaria en Gestión y Análisis de Datos en la Facultad de Ciencias Económicas (FCE-UBA). Mi formación académica combina un sólido trasfondo en métodos cuantitativos, álgebra lineal, programación lineal y cálculo diferencial con la aplicación práctica en desarrollo de soluciones orientadas a datos. Me especializo en la extracción, limpieza, preparación e integración de datasets complejos utilizando Python (Pandas) y SQL, así como en el modelado estadístico para la toma de decisiones informadas.
+        </p>
+        <p style="text-align: justify; margin-bottom: 1rem;">
+          Tengo un interés constante por la innovación tecnológica, dedicando tiempo a la investigación e implementación activa de herramientas avanzadas de Inteligencia Artificial y entornos de desarrollo para optimizar flujos de análisis, automatizar procesos y elevar la productividad en la resolución de problemas organizacionales.
         </p>
         <p style="text-align: justify;">
-          🎯 <strong>Objetivo:</strong> Sumarme a un equipo de trabajo dinámico mediante una <strong>pasantía o rol Trainee</strong> en el área de Análisis de Datos, Business Intelligence o Inteligencia Artificial. Destaco por mis sólidas ganas de aprender de forma continua nuevas herramientas tecnológicas, adaptarme a nuevos desafíos e integrarme activamente al trabajo colaborativo en equipo.
+          🎯 <strong>Objetivo:</strong> Incorporarme a un equipo de trabajo profesional a través de una <strong>pasantía o rol Trainee</strong> en las áreas de Análisis de Datos, Business Intelligence o Inteligencia Artificial. Destaco por mis sólidas ganas de aprender de forma continua, mi agilidad para asimilar nuevas herramientas técnicas, adaptabilidad ante desafíos complejos y mi compromiso con el trabajo colaborativo e interdisciplinario en equipo.
         </p>
       </div>
     </section>
@@ -267,28 +248,12 @@
       <h2>Proyectos & Trabajos Realizados</h2>
 
       <div id="projects-list">
-        <!-- Único Proyecto: TP sobre Suicidios -->
+        <!-- Único Proyecto: TP sobre Suicidio -->
         <div class="card project-item python">
           <h3>TP sobre Suicidio: Mortalidad por Suicidios en Argentina (2020–2024)</h3>
-          <p style="margin-bottom: 0.8rem; text-align: justify;">
-            <strong>Trabajo Práctico Grupal de Laboratorio de Métodos Cuantitativos (FCE-UBA):</strong> Investigación cuantitativa que evalúa la evolución temporal, disparidad de género y distribución geográfica de la mortalidad por suicidio en Argentina tras la pandemia de COVID-19[cite: 3].
+          <p style="margin-bottom: 1rem; text-align: justify;">
+            <strong>Trabajo Práctico Grupal de Laboratorio de Métodos Cuantitativos (FCE-UBA):</strong> Investigación cuantitativa desarrollada sobre bases de datos oficiales del Sistema Nacional de Información Criminal (SNIC)[cite: 2, 3]. El estudio aborda la evaluación de la evolución temporal, la brecha de género y la distribución geográfica de la mortalidad por suicidios en Argentina a lo largo del período 2020–2024, analizando las tendencias demográficas y socioepidemiológicas tras la pandemia de COVID-19[cite: 2].
           </p>
-          <p style="margin-bottom: 0.6rem; text-align: justify;">
-            🗃️ <strong>Bases de Datos Utilizadas:</strong>
-          </p>
-          <ul style="margin-left: 1.2rem; margin-bottom: 0.8rem; color: var(--text-muted); font-size: 0.88rem; text-align: justify;">
-            <li><strong>Base provincial agregada (SNIC):</strong> 26.528 registros con datos históricos por jurisdicción[cite: 4].</li>
-            <li><strong>Base de microdatos por víctima (DNEC-SNIC):</strong> 30.177 registros individuales con variables demográficas (sexo, tramo de edad, provincia, fecha y modalidad)[cite: 4].</li>
-            <li><strong>Base Máster Integrada:</strong> Consolidación mediante pipelines en Python (Pandas) alcanzando una muestra unificada de 19.323 casos[cite: 3, 4].</li>
-          </ul>
-          <p style="margin-bottom: 0.6rem; text-align: justify;">
-            📊 <strong>Resultados Principales:</strong>
-          </p>
-          <ul style="margin-left: 1.2rem; margin-bottom: 1rem; color: var(--text-muted); font-size: 0.88rem; text-align: justify;">
-            <li>Incremento acumulado del 30,25% entre 2020 (3.262 casos) y 2024 (4.249 casos)[cite: 3, 5].</li>
-            <li>Marcada brecha de género: el 78,97% de las víctimas fueron varones (razón de ~4 hombres por cada mujer)[cite: 3, 7].</li>
-            <li>Mayor concentración etaria en jóvenes de 15 a 34 años (8.897 víctimas), alcanzando su pico entre los 20 y 24 años (2.557 casos)[cite: 6].</li>
-          </ul>
           <div style="margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem;">
             <span class="tag" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">Python</span>
             <span class="tag" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">Pandas</span>
