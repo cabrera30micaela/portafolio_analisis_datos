@@ -225,10 +225,10 @@
       <h2>Perfil Profesional</h2>
       <div class="card">
         <p style="text-align: justify; margin-bottom: 1rem;">
-          Estudiante de la Tecnicatura en Gestión y Análisis de Datos (FCE-UBA) con formación continua en Inteligencia Artificial. Me enfoco en la resolución de problemas cuantitativos, limpieza, integración y análisis de datos utilizando Python y SQL, combinados con modelos de optimización lineal y análisis financiero.
+          Estudiante de la Tecnicatura en Gestión y Análisis de Datos en la Facultad de Ciencias Económicas (FCE-UBA). Me enfoco en el análisis cuantitativo, la limpieza, integración y procesamiento de datos con Python y SQL, combinados con modelos de optimización lineal y análisis financiero. Me encuentro en constante formación e investigación sobre las nuevas herramientas de Inteligencia Artificial para potenciar procesos de análisis y productividad.
         </p>
         <p style="text-align: justify;">
-          🎯 <strong>Objetivo:</strong> Sumarme a un equipo de trabajo dinámico mediante una <strong>pasantía o rol Trainee</strong> en el área de Análisis de Datos, Business Intelligence o Inteligencia Artificial.
+          🎯 <strong>Objetivo:</strong> Sumarme a un equipo de trabajo dinámico mediante una <strong>pasantía o rol Trainee</strong> en el área de Análisis de Datos, Business Intelligence o Inteligencia Artificial. Destaco por mis sólidas ganas de aprender de forma continua nuevas herramientas tecnológicas, adaptarme a nuevos desafíos e integrarme activamente al trabajo colaborativo en equipo.
         </p>
       </div>
     </section>
@@ -252,10 +252,12 @@
         <span class="tag">SQL</span>
         <span class="tag">Google Colab</span>
         <span class="tag">Modelos de IA</span>
+        <span class="tag">LaTeX</span>
+        <span class="tag">HTML</span>
         <span class="tag">Programación Lineal</span>
         <span class="tag">Álgebra Lineal & Matrices</span>
         <span class="tag">Análisis Financiero</span>
-        <span class="tag">Excel Avanzado</span>
+        <span class="tag">Excel Intermedio</span>
         <span class="tag">Gestión Contable / Administrativa</span>
       </div>
     </section>
@@ -263,44 +265,39 @@
     <!-- Pestaña 3: Trabajos Hechos -->
     <section id="projects" class="tab-content">
       <h2>Proyectos & Trabajos Realizados</h2>
-      
-      <!-- Filtro Interactivo -->
-      <div class="filter-container">
-        <button class="filter-btn active" onclick="filterProjects('all')">Todos</button>
-        <button class="filter-btn" onclick="filterProjects('python')">Python</button>
-        <button class="filter-btn" onclick="filterProjects('math')">Optimización / Math</button>
-      </div>
 
       <div id="projects-list">
+        <!-- Único Proyecto: TP sobre Suicidios -->
         <div class="card project-item python">
-          <h3>Mortalidad por Suicidios en Argwntina - Analisis SNIC (2020–2024)</h3>
-          <p style="margin-bottom: 0.8rem; text-align: justify;>
-            <strong>Trabajo Práctico Grupal (FCE-UBA):</strong> Investigación cuantitativa y socioepidemiológica basada en la integración de datos abiertos del Sistema Nacional de Información Criminal (SNIC - Ministerio de Seguridad). Mediante pipelines desarrollados en <strong>Python (Pandas)</strong>, procesamos y consolidamos una base máster de 19.323 registros individuales.
+          <h3>TP sobre Suicidio: Mortalidad por Suicidios en Argentina (2020–2024)</h3>
+          <p style="margin-bottom: 0.8rem; text-align: justify;">
+            <strong>Trabajo Práctico Grupal de Laboratorio de Métodos Cuantitativos (FCE-UBA):</strong> Investigación cuantitativa que evalúa la evolución temporal, disparidad de género y distribución geográfica de la mortalidad por suicidio en Argentina tras la pandemia de COVID-19[cite: 3].
           </p>
-          <p style="margin-botton: 0.8rem; text-algin: justify;">
-             📊 <strong>Hallazgos Clave del Estudio:</strong>
-            </p>
-          <ul style="margin-left: 1.2rem; magin-bottom: 1rem; color: var(--text-muted); font-size: 0.88rem; text-aligin: justify;">
-             <li><strong>Evolución temporal:</strong> Los casos aumentaron un 30,25% entre 2020 (3.262 casos) y 2024 (4.249 casos), alcanzando una meseta en el nivel más alto de la serie[cite: 3, 5].</li>
-            <li><strong>Brecha de género:</strong> El 78,97% de las víctimas son varones. La brecha se mantuvo constante con un promedio de 4 muertes masculinas por cada mujer[cite: 7].</li>
-            <li><strong>Concentración etaria:</strong> La franja joven de 15 a 34 años concentró 8.897 casos[cite: 6], alcanzando su pico máximo entre los 20 y 24 años (2.557 víctimas)[cite: 6].</li>
-            <li><strong>Distribución geográfica:</strong> CABA presentó la menor tasa (7,1 por 100.000 hab.), mientras que Entre Ríos lideró el ranking nacional con 17,4 por 100.000 hab.[cite: 8], evidenciando la disparidad en infraestructura sanitaria[cite: 8].</li>
+          <p style="margin-bottom: 0.6rem; text-align: justify;">
+            🗃️ <strong>Bases de Datos Utilizadas:</strong>
+          </p>
+          <ul style="margin-left: 1.2rem; margin-bottom: 0.8rem; color: var(--text-muted); font-size: 0.88rem; text-align: justify;">
+            <li><strong>Base provincial agregada (SNIC):</strong> 26.528 registros con datos históricos por jurisdicción[cite: 4].</li>
+            <li><strong>Base de microdatos por víctima (DNEC-SNIC):</strong> 30.177 registros individuales con variables demográficas (sexo, tramo de edad, provincia, fecha y modalidad)[cite: 4].</li>
+            <li><strong>Base Máster Integrada:</strong> Consolidación mediante pipelines en Python (Pandas) alcanzando una muestra unificada de 19.323 casos[cite: 3, 4].</li>
           </ul>
-          <!-- Reemplaza el enlace de abajo con el link exacto del repositorio del grupo o archivo en Colab -->
-          <a href="https://github.com/fce-laboratoriotp/tp-labo" target="_blank" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">Ver Proyecto en GitHub</a>
-        </div>
-
-        <div class="card project-item math">
-          <h3>Modelos de Optimización & Análisis Financiero</h3>
-          <p style="margin-bottom: 0.8rem;">
-            Modelización matemática de problemas organizacionales mediante programación lineal, sistemas de ecuaciones y matrices. Aplicación de cálculo marginal e integral a funciones de oferta, demanda, costos y beneficios.
+          <p style="margin-bottom: 0.6rem; text-align: justify;">
+            📊 <strong>Resultados Principales:</strong>
           </p>
-          <!-- Reemplaza el enlace de abajo con el link exacto del repositorio del grupo o archivo en Colab -->
-         <div style="margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem;">
-            <span class="tag" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">Programación Lineal</span>
-            <span class="tag" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">Álgebra Lineal</span>
-            <span class="tag" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">Análisis Financiero</span>
-         </div>  
+          <ul style="margin-left: 1.2rem; margin-bottom: 1rem; color: var(--text-muted); font-size: 0.88rem; text-align: justify;">
+            <li>Incremento acumulado del 30,25% entre 2020 (3.262 casos) y 2024 (4.249 casos)[cite: 3, 5].</li>
+            <li>Marcada brecha de género: el 78,97% de las víctimas fueron varones (razón de ~4 hombres por cada mujer)[cite: 3, 7].</li>
+            <li>Mayor concentración etaria en jóvenes de 15 a 34 años (8.897 víctimas), alcanzando su pico entre los 20 y 24 años (2.557 casos)[cite: 6].</li>
+          </ul>
+          <div style="margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem;">
+            <span class="tag" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">Python</span>
+            <span class="tag" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">Pandas</span>
+            <span class="tag" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">Matplotlib</span>
+            <span class="tag" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">ETL & Merge</span>
+            <span class="tag" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">LaTeX</span>
+          </div>
+          <a href="https://github.com/fce-laboratoriotp/tp-labo" target="_blank" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">Ver Proyecto en GitHub 🔗</a>
+        </div>
       </div>
     </section>
 
@@ -321,22 +318,6 @@
 
       document.getElementById(tabId).classList.add('active');
       event.currentTarget.classList.add('active');
-    }
-
-    function filterProjects(category) {
-      const items = document.querySelectorAll('.project-item');
-      const buttons = document.querySelectorAll('.filter-btn');
-
-      buttons.forEach(btn => btn.classList.remove('active'));
-      event.currentTarget.classList.add('active');
-
-      items.forEach(item => {
-        if (category === 'all' || item.classList.contains(category)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
     }
   </script>
 </body>
